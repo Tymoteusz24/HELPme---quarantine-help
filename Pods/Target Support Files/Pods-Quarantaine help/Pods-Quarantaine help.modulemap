@@ -1,0 +1,6 @@
+framework module Pods_Quarantaine_help {
+  umbrella header "Pods-Quarantaine help-umbrella.h"
+
+  export *
+  module * { export * }
+}

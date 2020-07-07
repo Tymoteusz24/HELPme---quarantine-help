@@ -1,0 +1,114 @@
+
+/* Class = "UILabel"; text = "Walk a dog"; ObjectID = "017-xg-j2j"; */
+"017-xg-j2j.text" = "Walk a dog";
+
+/* Class = "UIButton"; normalTitle = "Click here to check privacy policy"; ObjectID = "17D-jR-u6C"; */
+"17D-jR-u6C.normalTitle" = "Click here to check privacy policy";
+
+/* Class = "UILabel"; text = "Chat"; ObjectID = "1IY-KR-2FD"; */
+"1IY-KR-2FD.text" = "Chat";
+
+/* Class = "UILabel"; text = "Check facebook profile"; ObjectID = "1aq-3b-hLO"; */
+"1aq-3b-hLO.text" = "Check facebook profile";
+
+/* Class = "UILabel"; text = "Buy medicines"; ObjectID = "1hp-zZ-EX5"; */
+"1hp-zZ-EX5.text" = "Buy medicines";
+
+/* Class = "UIButton"; normalTitle = "Log in"; ObjectID = "26N-HL-5G6"; */
+"26N-HL-5G6.normalTitle" = "Log in";
+
+/* Class = "UILabel"; text = "Walk a dog"; ObjectID = "28s-06-Yok"; */
+"28s-06-Yok.text" = "Walk a dog";
+
+/* Class = "UILabel"; text = "John, status: busy"; ObjectID = "2AN-1M-BzX"; */
+"2AN-1M-BzX.text" = "John, status: busy";
+
+/* Class = "UIButton"; normalTitle = "Become a volunteer"; ObjectID = "63E-Yy-av2"; */
+"63E-Yy-av2.normalTitle" = "Become a volunteer";
+
+/* Class = "UILabel"; text = "Chat"; ObjectID = "74g-IC-tvK"; */
+"74g-IC-tvK.text" = "Chat";
+
+/* Class = "UILabel"; text = "Edit kind of help"; ObjectID = "AGT-Rj-dvj"; */
+"AGT-Rj-dvj.text" = "Edit kind of help";
+
+/* Class = "UILabel"; text = "How can help you?"; ObjectID = "DTA-AF-npQ"; */
+"DTA-AF-npQ.text" = "How can help you?";
+
+/* Class = "UILabel"; text = "Buy medicines"; ObjectID = "Gph-A0-Qf2"; */
+"Gph-A0-Qf2.text" = "Buy medicines";
+
+/* Class = "UILabel"; text = "John, status: busy"; ObjectID = "KbR-IC-S0x"; */
+"KbR-IC-S0x.text" = "John, status: busy";
+
+/* Class = "UILabel"; text = "Choose how you want to help. (multiple choice)"; ObjectID = "KbS-ev-lPM"; */
+"KbS-ev-lPM.text" = "Choose how you want to help. (multiple choice)";
+
+/* Class = "UILabel"; text = "This application was created to help people in quarantine or at risk of complications due to coronavirus disease. Volunteers offer their help in shopping and going out with the dog."; ObjectID = "Kzy-v8-eGp"; */
+"Kzy-v8-eGp.text" = "This application was created to help people in quarantine or at risk of complications due to coronavirus disease. Volunteers offer their help in shopping and going out with the dog.";
+
+/* Class = "UILabel"; text = "4.9 (160)"; ObjectID = "NcU-Kp-m4B"; */
+"NcU-Kp-m4B.text" = "4.9 (160)";
+
+/* Class = "UIButton"; normalTitle = "Log Out"; ObjectID = "P1e-YD-dfV"; */
+"P1e-YD-dfV.normalTitle" = "Log Out";
+
+/* Class = "UILabel"; text = "Do grocceries"; ObjectID = "QCN-vg-ZvR"; */
+"QCN-vg-ZvR.text" = "Do grocceries";
+
+/* Class = "UIButton"; normalTitle = "Confirm"; ObjectID = "Rsk-jU-LSG"; */
+"Rsk-jU-LSG.normalTitle" = "Confirm";
+
+/* Class = "UINavigationItem"; title = "HELPme"; ObjectID = "WGu-gl-BBp"; */
+"WGu-gl-BBp.title" = "HELPme";
+
+/* Class = "UILabel"; text = "Do grocceries"; ObjectID = "apB-5J-27I"; */
+"apB-5J-27I.text" = "Do grocceries";
+
+/* Class = "UIButton"; normalTitle = "Go to Facebook"; ObjectID = "atg-SC-0w4"; */
+"atg-SC-0w4.normalTitle" = "Go to Facebook";
+
+/* Class = "UILabel"; text = "How to use the app"; ObjectID = "eAU-M5-Wvi"; */
+"eAU-M5-Wvi.text" = "How to use the app";
+
+/* Class = "UILabel"; text = "-> Do not share any sensitive information"; ObjectID = "eNx-er-sLF"; */
+"eNx-er-sLF.text" = "-> Do not share any sensitive information";
+
+/* Class = "UILabel"; text = "Please login with facebook"; ObjectID = "h4b-xb-huZ"; */
+"h4b-xb-huZ.text" = "Please login with facebook";
+
+/* Class = "UILabel"; text = "-> Please share this app to help people get help"; ObjectID = "i4M-eC-lFt"; */
+"i4M-eC-lFt.text" = "-> Please share this app to help people get help";
+
+/* Class = "UILabel"; text = "-> Always check volunteer facebook profile"; ObjectID = "kWm-yj-bgt"; */
+"kWm-yj-bgt.text" = "-> Always check volunteer facebook profile";
+
+/* Class = "UILabel"; text = "-> Contact with volunteer only via messenger"; ObjectID = "keS-kh-oDf"; */
+"keS-kh-oDf.text" = "-> Contact with volunteer only via messenger";
+
+/* Class = "UILabel"; text = "Tap volunteer on the map or become one."; ObjectID = "msO-6e-ck7"; */
+"msO-6e-ck7.text" = "Tap volunteer on the map or become one.";
+
+/* Class = "UILabel"; text = "-> Never pay for help. A volunteer should help you for free"; ObjectID = "p5s-bq-W4w"; */
+"p5s-bq-W4w.text" = "-> Never pay for help. A volunteer should help you for free";
+
+/* Class = "UIButton"; normalTitle = "Share the app"; ObjectID = "pmH-mQ-aTG"; */
+"pmH-mQ-aTG.normalTitle" = "Share the app";
+
+/* Class = "UILabel"; text = "Do grocceries"; ObjectID = "rOl-a7-kJN"; */
+"rOl-a7-kJN.text" = "Do grocceries";
+
+/* Class = "UILabel"; text = "Use facebook to contact via private message"; ObjectID = "snP-mS-Bvv"; */
+"snP-mS-Bvv.text" = "Use facebook to contact via private message";
+
+/* Class = "UILabel"; text = "4.9 (160)"; ObjectID = "vNX-ir-1qq"; */
+"vNX-ir-1qq.text" = "4.9 (160)";
+
+/* Class = "UILabel"; text = "Walk a dog"; ObjectID = "yJi-R2-4l8"; */
+"yJi-R2-4l8.text" = "Walk a dog";
+
+/* Class = "UILabel"; text = "Chat"; ObjectID = "yS9-YN-yg8"; */
+"yS9-YN-yg8.text" = "Chat";
+
+/* Class = "UILabel"; text = "Buy medicines"; ObjectID = "z3g-jY-4Mm"; */
+"z3g-jY-4Mm.text" = "Buy medicines";

@@ -1,0 +1,828 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 51;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		7008FE2E2421069C0036C591 /* AddVolunteerVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7008FE2D2421069C0036C591 /* AddVolunteerVC.swift */; };
+		705D836E2422598300FB550F /* VolunteerAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 705D836D2422598300FB550F /* VolunteerAnnotation.swift */; };
+		705D83702422639800FB550F /* VolunteerProfileVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 705D836F2422639800FB550F /* VolunteerProfileVC.swift */; };
+		705D837224229C8500FB550F /* VCExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 705D837124229C8500FB550F /* VCExtension.swift */; };
+		705D83742422AF7000FB550F /* ProfileVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 705D83732422AF6F00FB550F /* ProfileVC.swift */; };
+		705D837624239D3800FB550F /* AppStoreReviewManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 705D837524239D3800FB550F /* AppStoreReviewManager.swift */; };
+		705D83782423BB7C00FB550F /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 705D83772423BB7B00FB550F /* TabBarController.swift */; };
+		705D837A2423DB2F00FB550F /* InformationVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 705D83792423DB2F00FB550F /* InformationVC.swift */; };
+		705E86742420CAD900A6944B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 705E86732420CAD900A6944B /* AppDelegate.swift */; };
+		705E86762420CAD900A6944B /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 705E86752420CAD900A6944B /* SceneDelegate.swift */; };
+		705E867D2420CAD900A6944B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 705E867B2420CAD900A6944B /* Main.storyboard */; };
+		705E867F2420CADB00A6944B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 705E867E2420CADB00A6944B /* Assets.xcassets */; };
+		705E86822420CADB00A6944B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 705E86802420CADB00A6944B /* LaunchScreen.storyboard */; };
+		705E868D2420CADB00A6944B /* Quarantaine_helpTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 705E868C2420CADB00A6944B /* Quarantaine_helpTests.swift */; };
+		705E86982420CADB00A6944B /* Quarantaine_helpUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 705E86972420CADB00A6944B /* Quarantaine_helpUITests.swift */; };
+		705E86A72420CC6C00A6944B /* RoundedButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 705E86A62420CC6C00A6944B /* RoundedButton.swift */; };
+		705E86AA2420CD5600A6944B /* MapVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 705E86A92420CD5600A6944B /* MapVC.swift */; };
+		705E86AD2420CE4700A6944B /* VolunteerBrain.swift in Sources */ = {isa = PBXBuildFile; fileRef = 705E86AC2420CE4700A6944B /* VolunteerBrain.swift */; };
+		705E86AF2420CEB800A6944B /* Volunteer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 705E86AE2420CEB800A6944B /* Volunteer.swift */; };
+		705E86B72420D27700A6944B /* Contstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 705E86B62420D27700A6944B /* Contstants.swift */; };
+		705E86B92420E76600A6944B /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 705E86B82420E76600A6944B /* GoogleService-Info.plist */; };
+		705E86BA2420E76600A6944B /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 705E86B82420E76600A6944B /* GoogleService-Info.plist */; };
+		705EA03D2420EE3C00552303 /* FirebaseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 705EA03C2420EE3C00552303 /* FirebaseManager.swift */; };
+		7083C34124AF65D30014A4E4 /* MapControllerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7083C34024AF65D30014A4E4 /* MapControllerViewModel.swift */; };
+		7083C34424AF6AFE0014A4E4 /* UIImage + Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7083C34324AF6AFE0014A4E4 /* UIImage + Extension.swift */; };
+		7083C34624B321180014A4E4 /* AddVolunteerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7083C34524B321180014A4E4 /* AddVolunteerViewModel.swift */; };
+		7083C34824B335400014A4E4 /* FacebookLoginManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7083C34724B335400014A4E4 /* FacebookLoginManager.swift */; };
+		B53D817BD2F2B38483C790D2 /* Pods_Quarantaine_help.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D5FF113F01F23E6E6DDB3C47 /* Pods_Quarantaine_help.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		705E86892420CADB00A6944B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 705E86682420CAD900A6944B /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 705E866F2420CAD900A6944B;
+			remoteInfo = "Quarantaine help";
+		};
+		705E86942420CADB00A6944B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 705E86682420CAD900A6944B /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 705E866F2420CAD900A6944B;
+			remoteInfo = "Quarantaine help";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		1C59B33CA95B13463921BD84 /* Pods-Quarantaine help.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Quarantaine help.release.xcconfig"; path = "Target Support Files/Pods-Quarantaine help/Pods-Quarantaine help.release.xcconfig"; sourceTree = "<group>"; };
+		7008FE2D2421069C0036C591 /* AddVolunteerVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddVolunteerVC.swift; sourceTree = "<group>"; };
+		70322A2924263DE600D0054D /* HELPme.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = HELPme.entitlements; sourceTree = "<group>"; };
+		705D836D2422598300FB550F /* VolunteerAnnotation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VolunteerAnnotation.swift; sourceTree = "<group>"; };
+		705D836F2422639800FB550F /* VolunteerProfileVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VolunteerProfileVC.swift; sourceTree = "<group>"; };
+		705D837124229C8500FB550F /* VCExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VCExtension.swift; sourceTree = "<group>"; };
+		705D83732422AF6F00FB550F /* ProfileVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileVC.swift; sourceTree = "<group>"; };
+		705D837524239D3800FB550F /* AppStoreReviewManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppStoreReviewManager.swift; sourceTree = "<group>"; };
+		705D83772423BB7B00FB550F /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
+		705D83792423DB2F00FB550F /* InformationVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InformationVC.swift; sourceTree = "<group>"; };
+		705D837B24241C3D00FB550F /* pl */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = pl; path = pl.lproj/Main.strings; sourceTree = "<group>"; };
+		705D837C24241C3F00FB550F /* pl */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = pl; path = pl.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
+		705D837D24241C5400FB550F /* it */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = it; path = it.lproj/Main.strings; sourceTree = "<group>"; };
+		705D837E24241C5400FB550F /* it */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = it; path = it.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
+		705D837F24241C5F00FB550F /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/Main.strings; sourceTree = "<group>"; };
+		705D838024241C5F00FB550F /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
+		705E86702420CAD900A6944B /* HELPme.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HELPme.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		705E86732420CAD900A6944B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		705E86752420CAD900A6944B /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		705E867C2420CAD900A6944B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		705E867E2420CADB00A6944B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		705E86812420CADB00A6944B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		705E86832420CADB00A6944B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		705E86882420CADB00A6944B /* Quarantaine helpTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Quarantaine helpTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		705E868C2420CADB00A6944B /* Quarantaine_helpTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Quarantaine_helpTests.swift; sourceTree = "<group>"; };
+		705E868E2420CADB00A6944B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		705E86932420CADB00A6944B /* Quarantaine helpUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Quarantaine helpUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		705E86972420CADB00A6944B /* Quarantaine_helpUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Quarantaine_helpUITests.swift; sourceTree = "<group>"; };
+		705E86992420CADB00A6944B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		705E86A62420CC6C00A6944B /* RoundedButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedButton.swift; sourceTree = "<group>"; };
+		705E86A92420CD5600A6944B /* MapVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapVC.swift; sourceTree = "<group>"; };
+		705E86AC2420CE4700A6944B /* VolunteerBrain.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VolunteerBrain.swift; sourceTree = "<group>"; };
+		705E86AE2420CEB800A6944B /* Volunteer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Volunteer.swift; sourceTree = "<group>"; };
+		705E86B62420D27700A6944B /* Contstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Contstants.swift; sourceTree = "<group>"; };
+		705E86B82420E76600A6944B /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		705EA03C2420EE3C00552303 /* FirebaseManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseManager.swift; sourceTree = "<group>"; };
+		7083C34024AF65D30014A4E4 /* MapControllerViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapControllerViewModel.swift; sourceTree = "<group>"; };
+		7083C34324AF6AFE0014A4E4 /* UIImage + Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage + Extension.swift"; sourceTree = "<group>"; };
+		7083C34524B321180014A4E4 /* AddVolunteerViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddVolunteerViewModel.swift; sourceTree = "<group>"; };
+		7083C34724B335400014A4E4 /* FacebookLoginManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FacebookLoginManager.swift; sourceTree = "<group>"; };
+		7533AE9440C4534007A080F1 /* Pods-Quarantaine help.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Quarantaine help.debug.xcconfig"; path = "Target Support Files/Pods-Quarantaine help/Pods-Quarantaine help.debug.xcconfig"; sourceTree = "<group>"; };
+		D5FF113F01F23E6E6DDB3C47 /* Pods_Quarantaine_help.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Quarantaine_help.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		705E866D2420CAD900A6944B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B53D817BD2F2B38483C790D2 /* Pods_Quarantaine_help.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		705E86852420CADB00A6944B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		705E86902420CADB00A6944B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		33DD4A122EAEDC8ED079F9CD /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				7533AE9440C4534007A080F1 /* Pods-Quarantaine help.debug.xcconfig */,
+				1C59B33CA95B13463921BD84 /* Pods-Quarantaine help.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		705E86672420CAD900A6944B = {
+			isa = PBXGroup;
+			children = (
+				705E86722420CAD900A6944B /* Quarantaine help */,
+				705E868B2420CADB00A6944B /* Quarantaine helpTests */,
+				705E86962420CADB00A6944B /* Quarantaine helpUITests */,
+				705E86712420CAD900A6944B /* Products */,
+				33DD4A122EAEDC8ED079F9CD /* Pods */,
+				7F0976F92936FD4F5165413B /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		705E86712420CAD900A6944B /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				705E86702420CAD900A6944B /* HELPme.app */,
+				705E86882420CADB00A6944B /* Quarantaine helpTests.xctest */,
+				705E86932420CADB00A6944B /* Quarantaine helpUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		705E86722420CAD900A6944B /* Quarantaine help */ = {
+			isa = PBXGroup;
+			children = (
+				7083C34224AF6AE40014A4E4 /* Extensions */,
+				7083C33F24AF65A70014A4E4 /* ViewModels */,
+				7083C33E24AF659D0014A4E4 /* Services */,
+				70322A2924263DE600D0054D /* HELPme.entitlements */,
+				705E86B52420D26A00A6944B /* Resources */,
+				705E86AB2420CE0E00A6944B /* Model */,
+				705E86A82420CD4200A6944B /* Controller */,
+				705E86A52420CC3100A6944B /* View */,
+				705E86732420CAD900A6944B /* AppDelegate.swift */,
+				705E86752420CAD900A6944B /* SceneDelegate.swift */,
+				705E867B2420CAD900A6944B /* Main.storyboard */,
+				705E867E2420CADB00A6944B /* Assets.xcassets */,
+				705E86802420CADB00A6944B /* LaunchScreen.storyboard */,
+				705E86832420CADB00A6944B /* Info.plist */,
+			);
+			path = "Quarantaine help";
+			sourceTree = "<group>";
+		};
+		705E868B2420CADB00A6944B /* Quarantaine helpTests */ = {
+			isa = PBXGroup;
+			children = (
+				705E868C2420CADB00A6944B /* Quarantaine_helpTests.swift */,
+				705E868E2420CADB00A6944B /* Info.plist */,
+			);
+			path = "Quarantaine helpTests";
+			sourceTree = "<group>";
+		};
+		705E86962420CADB00A6944B /* Quarantaine helpUITests */ = {
+			isa = PBXGroup;
+			children = (
+				705E86972420CADB00A6944B /* Quarantaine_helpUITests.swift */,
+				705E86B82420E76600A6944B /* GoogleService-Info.plist */,
+				705E86992420CADB00A6944B /* Info.plist */,
+			);
+			path = "Quarantaine helpUITests";
+			sourceTree = "<group>";
+		};
+		705E86A52420CC3100A6944B /* View */ = {
+			isa = PBXGroup;
+			children = (
+				705E86A62420CC6C00A6944B /* RoundedButton.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		705E86A82420CD4200A6944B /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				705E86A92420CD5600A6944B /* MapVC.swift */,
+				7008FE2D2421069C0036C591 /* AddVolunteerVC.swift */,
+				705D836F2422639800FB550F /* VolunteerProfileVC.swift */,
+				705D83732422AF6F00FB550F /* ProfileVC.swift */,
+				705D83772423BB7B00FB550F /* TabBarController.swift */,
+				705D83792423DB2F00FB550F /* InformationVC.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		705E86AB2420CE0E00A6944B /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				705E86AC2420CE4700A6944B /* VolunteerBrain.swift */,
+				705E86AE2420CEB800A6944B /* Volunteer.swift */,
+				705D836D2422598300FB550F /* VolunteerAnnotation.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		705E86B52420D26A00A6944B /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				705E86B62420D27700A6944B /* Contstants.swift */,
+				705D837124229C8500FB550F /* VCExtension.swift */,
+				705D837524239D3800FB550F /* AppStoreReviewManager.swift */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		7083C33E24AF659D0014A4E4 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				705EA03C2420EE3C00552303 /* FirebaseManager.swift */,
+				7083C34724B335400014A4E4 /* FacebookLoginManager.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		7083C33F24AF65A70014A4E4 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				7083C34024AF65D30014A4E4 /* MapControllerViewModel.swift */,
+				7083C34524B321180014A4E4 /* AddVolunteerViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		7083C34224AF6AE40014A4E4 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				7083C34324AF6AFE0014A4E4 /* UIImage + Extension.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		7F0976F92936FD4F5165413B /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				D5FF113F01F23E6E6DDB3C47 /* Pods_Quarantaine_help.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		705E866F2420CAD900A6944B /* Quarantaine help */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 705E869C2420CADB00A6944B /* Build configuration list for PBXNativeTarget "Quarantaine help" */;
+			buildPhases = (
+				B3A377AF28295FE4C5F80F55 /* [CP] Check Pods Manifest.lock */,
+				705E866C2420CAD900A6944B /* Sources */,
+				705E866D2420CAD900A6944B /* Frameworks */,
+				705E866E2420CAD900A6944B /* Resources */,
+				071D0C72B429E71AF985F9ED /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Quarantaine help";
+			productName = "Quarantaine help";
+			productReference = 705E86702420CAD900A6944B /* HELPme.app */;
+			productType = "com.apple.product-type.application";
+		};
+		705E86872420CADB00A6944B /* Quarantaine helpTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 705E869F2420CADB00A6944B /* Build configuration list for PBXNativeTarget "Quarantaine helpTests" */;
+			buildPhases = (
+				705E86842420CADB00A6944B /* Sources */,
+				705E86852420CADB00A6944B /* Frameworks */,
+				705E86862420CADB00A6944B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				705E868A2420CADB00A6944B /* PBXTargetDependency */,
+			);
+			name = "Quarantaine helpTests";
+			productName = "Quarantaine helpTests";
+			productReference = 705E86882420CADB00A6944B /* Quarantaine helpTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		705E86922420CADB00A6944B /* Quarantaine helpUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 705E86A22420CADB00A6944B /* Build configuration list for PBXNativeTarget "Quarantaine helpUITests" */;
+			buildPhases = (
+				705E868F2420CADB00A6944B /* Sources */,
+				705E86902420CADB00A6944B /* Frameworks */,
+				705E86912420CADB00A6944B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				705E86952420CADB00A6944B /* PBXTargetDependency */,
+			);
+			name = "Quarantaine helpUITests";
+			productName = "Quarantaine helpUITests";
+			productReference = 705E86932420CADB00A6944B /* Quarantaine helpUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		705E86682420CAD900A6944B /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1130;
+				LastUpgradeCheck = 1130;
+				ORGANIZATIONNAME = "Tymoteusz Pasieka";
+				TargetAttributes = {
+					705E866F2420CAD900A6944B = {
+						CreatedOnToolsVersion = 11.3.1;
+					};
+					705E86872420CADB00A6944B = {
+						CreatedOnToolsVersion = 11.3.1;
+						TestTargetID = 705E866F2420CAD900A6944B;
+					};
+					705E86922420CADB00A6944B = {
+						CreatedOnToolsVersion = 11.3.1;
+						TestTargetID = 705E866F2420CAD900A6944B;
+					};
+				};
+			};
+			buildConfigurationList = 705E866B2420CAD900A6944B /* Build configuration list for PBXProject "Quarantaine help" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+				pl,
+				it,
+				fr,
+			);
+			mainGroup = 705E86672420CAD900A6944B;
+			productRefGroup = 705E86712420CAD900A6944B /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				705E866F2420CAD900A6944B /* Quarantaine help */,
+				705E86872420CADB00A6944B /* Quarantaine helpTests */,
+				705E86922420CADB00A6944B /* Quarantaine helpUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		705E866E2420CAD900A6944B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				705E86822420CADB00A6944B /* LaunchScreen.storyboard in Resources */,
+				705E86B92420E76600A6944B /* GoogleService-Info.plist in Resources */,
+				705E867F2420CADB00A6944B /* Assets.xcassets in Resources */,
+				705E867D2420CAD900A6944B /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		705E86862420CADB00A6944B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		705E86912420CADB00A6944B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				705E86BA2420E76600A6944B /* GoogleService-Info.plist in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		071D0C72B429E71AF985F9ED /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Quarantaine help/Pods-Quarantaine help-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Quarantaine help/Pods-Quarantaine help-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Quarantaine help/Pods-Quarantaine help-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B3A377AF28295FE4C5F80F55 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Quarantaine help-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		705E866C2420CAD900A6944B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				705D83742422AF7000FB550F /* ProfileVC.swift in Sources */,
+				7083C34124AF65D30014A4E4 /* MapControllerViewModel.swift in Sources */,
+				705D837624239D3800FB550F /* AppStoreReviewManager.swift in Sources */,
+				7083C34824B335400014A4E4 /* FacebookLoginManager.swift in Sources */,
+				705E86B72420D27700A6944B /* Contstants.swift in Sources */,
+				705D837A2423DB2F00FB550F /* InformationVC.swift in Sources */,
+				7083C34424AF6AFE0014A4E4 /* UIImage + Extension.swift in Sources */,
+				7008FE2E2421069C0036C591 /* AddVolunteerVC.swift in Sources */,
+				705EA03D2420EE3C00552303 /* FirebaseManager.swift in Sources */,
+				7083C34624B321180014A4E4 /* AddVolunteerViewModel.swift in Sources */,
+				705D83782423BB7C00FB550F /* TabBarController.swift in Sources */,
+				705D837224229C8500FB550F /* VCExtension.swift in Sources */,
+				705E86AF2420CEB800A6944B /* Volunteer.swift in Sources */,
+				705E86AD2420CE4700A6944B /* VolunteerBrain.swift in Sources */,
+				705E86AA2420CD5600A6944B /* MapVC.swift in Sources */,
+				705E86A72420CC6C00A6944B /* RoundedButton.swift in Sources */,
+				705E86742420CAD900A6944B /* AppDelegate.swift in Sources */,
+				705D83702422639800FB550F /* VolunteerProfileVC.swift in Sources */,
+				705E86762420CAD900A6944B /* SceneDelegate.swift in Sources */,
+				705D836E2422598300FB550F /* VolunteerAnnotation.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		705E86842420CADB00A6944B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				705E868D2420CADB00A6944B /* Quarantaine_helpTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		705E868F2420CADB00A6944B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				705E86982420CADB00A6944B /* Quarantaine_helpUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		705E868A2420CADB00A6944B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 705E866F2420CAD900A6944B /* Quarantaine help */;
+			targetProxy = 705E86892420CADB00A6944B /* PBXContainerItemProxy */;
+		};
+		705E86952420CADB00A6944B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 705E866F2420CAD900A6944B /* Quarantaine help */;
+			targetProxy = 705E86942420CADB00A6944B /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		705E867B2420CAD900A6944B /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				705E867C2420CAD900A6944B /* Base */,
+				705D837B24241C3D00FB550F /* pl */,
+				705D837D24241C5400FB550F /* it */,
+				705D837F24241C5F00FB550F /* fr */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		705E86802420CADB00A6944B /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				705E86812420CADB00A6944B /* Base */,
+				705D837C24241C3F00FB550F /* pl */,
+				705D837E24241C5400FB550F /* it */,
+				705D838024241C5F00FB550F /* fr */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		705E869A2420CADB00A6944B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				OTHER_LDFLAGS = (
+					"$(OTHER_LDFLAGS)",
+					"-ObjC.",
+				);
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		705E869B2420CADB00A6944B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				OTHER_LDFLAGS = (
+					"$(OTHER_LDFLAGS)",
+					"-ObjC.",
+				);
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		705E869D2420CADB00A6944B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7533AE9440C4534007A080F1 /* Pods-Quarantaine help.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = "Quarantaine help/HELPme.entitlements";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 3;
+				DEVELOPMENT_TEAM = QBFHB9J93K;
+				INFOPLIST_FILE = "Quarantaine help/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "pasieka.Quarantaine-help";
+				PRODUCT_NAME = HELPme;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		705E869E2420CADB00A6944B /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1C59B33CA95B13463921BD84 /* Pods-Quarantaine help.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = "Quarantaine help/HELPme.entitlements";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 3;
+				DEVELOPMENT_TEAM = QBFHB9J93K;
+				INFOPLIST_FILE = "Quarantaine help/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "pasieka.Quarantaine-help";
+				PRODUCT_NAME = HELPme;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		705E86A02420CADB00A6944B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = QBFHB9J93K;
+				INFOPLIST_FILE = "Quarantaine helpTests/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "pasieka.Quarantaine-helpTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Quarantaine help.app/Quarantaine help";
+			};
+			name = Debug;
+		};
+		705E86A12420CADB00A6944B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = QBFHB9J93K;
+				INFOPLIST_FILE = "Quarantaine helpTests/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "pasieka.Quarantaine-helpTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Quarantaine help.app/Quarantaine help";
+			};
+			name = Release;
+		};
+		705E86A32420CADB00A6944B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = QBFHB9J93K;
+				INFOPLIST_FILE = "Quarantaine helpUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "pasieka.Quarantaine-helpUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "Quarantaine help";
+			};
+			name = Debug;
+		};
+		705E86A42420CADB00A6944B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = QBFHB9J93K;
+				INFOPLIST_FILE = "Quarantaine helpUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "pasieka.Quarantaine-helpUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "Quarantaine help";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		705E866B2420CAD900A6944B /* Build configuration list for PBXProject "Quarantaine help" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				705E869A2420CADB00A6944B /* Debug */,
+				705E869B2420CADB00A6944B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		705E869C2420CADB00A6944B /* Build configuration list for PBXNativeTarget "Quarantaine help" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				705E869D2420CADB00A6944B /* Debug */,
+				705E869E2420CADB00A6944B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		705E869F2420CADB00A6944B /* Build configuration list for PBXNativeTarget "Quarantaine helpTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				705E86A02420CADB00A6944B /* Debug */,
+				705E86A12420CADB00A6944B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		705E86A22420CADB00A6944B /* Build configuration list for PBXNativeTarget "Quarantaine helpUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				705E86A32420CADB00A6944B /* Debug */,
+				705E86A42420CADB00A6944B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 705E86682420CAD900A6944B /* Project object */;
+}

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CLIENT_ID</key>
+	<string>1017486598019-jkq6kfuc2oa8tr014od3sjg1u114d6oa.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.1017486598019-jkq6kfuc2oa8tr014od3sjg1u114d6oa</string>
+	<key>API_KEY</key>
+	<string>AIzaSyC0y5OuMutLmWZdWjKPsIEr46FdB9YmH2U</string>
+	<key>GCM_SENDER_ID</key>
+	<string>1017486598019</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>pasieka.Quarantaine-help</string>
+	<key>PROJECT_ID</key>
+	<string>quarantaine-help</string>
+	<key>STORAGE_BUCKET</key>
+	<string>quarantaine-help.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:1017486598019:ios:e58fbd14e91a68d78ee0b6</string>
+	<key>DATABASE_URL</key>
+	<string>https://quarantaine-help.firebaseio.com</string>
+</dict>
+</plist>

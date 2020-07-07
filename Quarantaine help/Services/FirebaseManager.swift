@@ -75,19 +75,17 @@ struct FirebaseManager {
         }
     }
     
-    func addNewVolunteer<T: Codable>(resource: Resource<T>, volunteer: T) {
+    func addNewVolunteer<T: Codable>(resource: Resource<T>, volunteer: T, id: String) {
         if let decodedVolunteer = try? FirebaseEncoder().encode(volunteer) {
-            resource.ref.childByAutoId().setValue(decodedVolunteer)
+            resource.ref.child(id).setValue(decodedVolunteer)
         }
         
     }
 
     
     
-    func removeVolunteer() {
-        if let safeUserUid = Auth.auth().currentUser?.uid {
-            volunteerRef.child(safeUserUid).removeValue()
-        }
+    func removeVolunteer(id: String) {
+            volunteerRef.child(id).removeValue()
     }
 }
 

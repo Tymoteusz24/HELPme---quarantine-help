@@ -10,7 +10,7 @@
 		7008FE2E2421069C0036C591 /* AddVolunteerVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7008FE2D2421069C0036C591 /* AddVolunteerVC.swift */; };
 		705D836E2422598300FB550F /* VolunteerAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 705D836D2422598300FB550F /* VolunteerAnnotation.swift */; };
 		705D83702422639800FB550F /* VolunteerProfileVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 705D836F2422639800FB550F /* VolunteerProfileVC.swift */; };
-		705D837224229C8500FB550F /* VCExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 705D837124229C8500FB550F /* VCExtension.swift */; };
+		705D837224229C8500FB550F /* ViewController + Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 705D837124229C8500FB550F /* ViewController + Extension.swift */; };
 		705D83742422AF7000FB550F /* ProfileVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 705D83732422AF6F00FB550F /* ProfileVC.swift */; };
 		705D837624239D3800FB550F /* AppStoreReviewManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 705D837524239D3800FB550F /* AppStoreReviewManager.swift */; };
 		705D83782423BB7C00FB550F /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 705D83772423BB7B00FB550F /* TabBarController.swift */; };
@@ -24,7 +24,6 @@
 		705E86982420CADB00A6944B /* Quarantaine_helpUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 705E86972420CADB00A6944B /* Quarantaine_helpUITests.swift */; };
 		705E86A72420CC6C00A6944B /* RoundedButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 705E86A62420CC6C00A6944B /* RoundedButton.swift */; };
 		705E86AA2420CD5600A6944B /* MapVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 705E86A92420CD5600A6944B /* MapVC.swift */; };
-		705E86AD2420CE4700A6944B /* VolunteerBrain.swift in Sources */ = {isa = PBXBuildFile; fileRef = 705E86AC2420CE4700A6944B /* VolunteerBrain.swift */; };
 		705E86AF2420CEB800A6944B /* Volunteer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 705E86AE2420CEB800A6944B /* Volunteer.swift */; };
 		705E86B72420D27700A6944B /* Contstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 705E86B62420D27700A6944B /* Contstants.swift */; };
 		705E86B92420E76600A6944B /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 705E86B82420E76600A6944B /* GoogleService-Info.plist */; };
@@ -34,6 +33,7 @@
 		7083C34424AF6AFE0014A4E4 /* UIImage + Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7083C34324AF6AFE0014A4E4 /* UIImage + Extension.swift */; };
 		7083C34624B321180014A4E4 /* AddVolunteerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7083C34524B321180014A4E4 /* AddVolunteerViewModel.swift */; };
 		7083C34824B335400014A4E4 /* FacebookLoginManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7083C34724B335400014A4E4 /* FacebookLoginManager.swift */; };
+		7083C34A24B4578A0014A4E4 /* VolunteerProfileViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7083C34924B4578A0014A4E4 /* VolunteerProfileViewModel.swift */; };
 		B53D817BD2F2B38483C790D2 /* Pods_Quarantaine_help.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D5FF113F01F23E6E6DDB3C47 /* Pods_Quarantaine_help.framework */; };
 /* End PBXBuildFile section */
 
@@ -60,7 +60,7 @@
 		70322A2924263DE600D0054D /* HELPme.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = HELPme.entitlements; sourceTree = "<group>"; };
 		705D836D2422598300FB550F /* VolunteerAnnotation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VolunteerAnnotation.swift; sourceTree = "<group>"; };
 		705D836F2422639800FB550F /* VolunteerProfileVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VolunteerProfileVC.swift; sourceTree = "<group>"; };
-		705D837124229C8500FB550F /* VCExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VCExtension.swift; sourceTree = "<group>"; };
+		705D837124229C8500FB550F /* ViewController + Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ViewController + Extension.swift"; sourceTree = "<group>"; };
 		705D83732422AF6F00FB550F /* ProfileVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileVC.swift; sourceTree = "<group>"; };
 		705D837524239D3800FB550F /* AppStoreReviewManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppStoreReviewManager.swift; sourceTree = "<group>"; };
 		705D83772423BB7B00FB550F /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
@@ -86,7 +86,6 @@
 		705E86992420CADB00A6944B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		705E86A62420CC6C00A6944B /* RoundedButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedButton.swift; sourceTree = "<group>"; };
 		705E86A92420CD5600A6944B /* MapVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapVC.swift; sourceTree = "<group>"; };
-		705E86AC2420CE4700A6944B /* VolunteerBrain.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VolunteerBrain.swift; sourceTree = "<group>"; };
 		705E86AE2420CEB800A6944B /* Volunteer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Volunteer.swift; sourceTree = "<group>"; };
 		705E86B62420D27700A6944B /* Contstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Contstants.swift; sourceTree = "<group>"; };
 		705E86B82420E76600A6944B /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
@@ -95,6 +94,7 @@
 		7083C34324AF6AFE0014A4E4 /* UIImage + Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage + Extension.swift"; sourceTree = "<group>"; };
 		7083C34524B321180014A4E4 /* AddVolunteerViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddVolunteerViewModel.swift; sourceTree = "<group>"; };
 		7083C34724B335400014A4E4 /* FacebookLoginManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FacebookLoginManager.swift; sourceTree = "<group>"; };
+		7083C34924B4578A0014A4E4 /* VolunteerProfileViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VolunteerProfileViewModel.swift; sourceTree = "<group>"; };
 		7533AE9440C4534007A080F1 /* Pods-Quarantaine help.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Quarantaine help.debug.xcconfig"; path = "Target Support Files/Pods-Quarantaine help/Pods-Quarantaine help.debug.xcconfig"; sourceTree = "<group>"; };
 		D5FF113F01F23E6E6DDB3C47 /* Pods_Quarantaine_help.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Quarantaine_help.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -220,7 +220,6 @@
 		705E86AB2420CE0E00A6944B /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				705E86AC2420CE4700A6944B /* VolunteerBrain.swift */,
 				705E86AE2420CEB800A6944B /* Volunteer.swift */,
 				705D836D2422598300FB550F /* VolunteerAnnotation.swift */,
 			);
@@ -231,7 +230,7 @@
 			isa = PBXGroup;
 			children = (
 				705E86B62420D27700A6944B /* Contstants.swift */,
-				705D837124229C8500FB550F /* VCExtension.swift */,
+				705D837124229C8500FB550F /* ViewController + Extension.swift */,
 				705D837524239D3800FB550F /* AppStoreReviewManager.swift */,
 			);
 			path = Resources;
@@ -251,6 +250,7 @@
 			children = (
 				7083C34024AF65D30014A4E4 /* MapControllerViewModel.swift */,
 				7083C34524B321180014A4E4 /* AddVolunteerViewModel.swift */,
+				7083C34924B4578A0014A4E4 /* VolunteerProfileViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -462,9 +462,9 @@
 				705EA03D2420EE3C00552303 /* FirebaseManager.swift in Sources */,
 				7083C34624B321180014A4E4 /* AddVolunteerViewModel.swift in Sources */,
 				705D83782423BB7C00FB550F /* TabBarController.swift in Sources */,
-				705D837224229C8500FB550F /* VCExtension.swift in Sources */,
+				705D837224229C8500FB550F /* ViewController + Extension.swift in Sources */,
+				7083C34A24B4578A0014A4E4 /* VolunteerProfileViewModel.swift in Sources */,
 				705E86AF2420CEB800A6944B /* Volunteer.swift in Sources */,
-				705E86AD2420CE4700A6944B /* VolunteerBrain.swift in Sources */,
 				705E86AA2420CD5600A6944B /* MapVC.swift in Sources */,
 				705E86A72420CC6C00A6944B /* RoundedButton.swift in Sources */,
 				705E86742420CAD900A6944B /* AppDelegate.swift in Sources */,

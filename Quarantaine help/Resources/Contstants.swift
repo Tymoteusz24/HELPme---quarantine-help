@@ -17,37 +17,22 @@ struct K {
     }
     struct UserFirebaseKeys {
         static let users = "users"
-       static let firebaseID = "firebaseID"
-        static let startedChats = "startedChats"
-        static let name = "name"
-        static let facebookProfile = "facebookProfile"
-        static let coordinates = "coordinates"
-        static let kindOfHelp = "kindOfHelp"
-        static let rate = "rate"
-        static let busy = "busy"
-        static let fbPictureURL = "fbPictureURL"
     }
     
-    struct MessageFirebaseKey {
-        static let timestamp = "timestamp"
-        static let message = "message"
-        static let userId = "userId"
+    struct UserDefaults {
+        static let raitings = "raitings"
     }
+//    
+//    struct CoordFirebaseKey {
+//          static let lat = "lat"
+//          static let long = "long"
+//    }
     
-    struct CoordFirebaseKey {
-          static let lat = "lat"
-          static let long = "long"
-    }
-    
-    struct Segues {
-        static let addSegue = "addSegue"
-        static let toVolunteerProfile = "toVolunteerProfile"
-        static let toOwnProfile = "toOwnProfile"
-    }
     struct StoryboardIdentifiers {
         static let addVolunteerController = "addVolunteerController"
         static let tabBarController = "tabBarController"
         static let volunteerProfileVC = "volunteerProfileVC"
+        static let profileVC = "profileVC"
     }
     
 }

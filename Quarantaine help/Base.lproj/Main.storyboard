@@ -589,7 +589,7 @@
         <!--ProfileVC-->
         <scene sceneID="JMt-aq-CvK">
             <objects>
-                <viewController id="5cJ-9V-mbV" customClass="ProfileVC" customModule="HELPme" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="profileVC" id="5cJ-9V-mbV" customClass="ProfileVC" customModule="HELPme" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="KJL-cO-a8h">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -719,20 +719,8 @@
                                     </button>
                                 </subviews>
                             </stackView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="t3z-Ur-P1k">
-                                <rect key="frame" x="10" y="10" width="40" height="40"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="40" id="bxr-8B-ozU"/>
-                                    <constraint firstAttribute="height" constant="40" id="fdz-DA-Fj5"/>
-                                </constraints>
-                                <color key="tintColor" red="0.65131789449999999" green="0.01196665503" blue="0.185541451" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <state key="normal" image="chevron.left.circle" catalog="system"/>
-                                <connections>
-                                    <action selector="backBtnTapped:" destination="5cJ-9V-mbV" eventType="touchUpInside" id="GDa-Z2-8fb"/>
-                                </connections>
-                            </button>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="j4v-40-xN1">
-                                <rect key="frame" x="20" y="55" width="374" height="115.5"/>
+                                <rect key="frame" x="20" y="40" width="374" height="115.5"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="John, status: busy" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KbR-IC-S0x">
                                         <rect key="frame" x="96" y="0.0" width="182.5" height="25.5"/>
@@ -772,33 +760,15 @@
                                     </label>
                                 </subviews>
                             </stackView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="P1e-YD-dfV">
-                                <rect key="frame" x="314" y="10" width="80" height="40"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="80" id="4Mv-gU-zyi"/>
-                                    <constraint firstAttribute="height" constant="40" id="xik-Pe-TjL"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="16"/>
-                                <state key="normal" title="Log Out">
-                                    <color key="titleColor" red="0.65131789449999999" green="0.01196665503" blue="0.185541451" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                </state>
-                                <connections>
-                                    <action selector="logOutPressed:" destination="5cJ-9V-mbV" eventType="touchUpInside" id="waS-fg-grJ"/>
-                                </connections>
-                            </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
-                            <constraint firstItem="t3z-Ur-P1k" firstAttribute="leading" secondItem="elD-RE-L6g" secondAttribute="leading" constant="10" id="8CU-4Y-t5q"/>
                             <constraint firstItem="elD-RE-L6g" firstAttribute="trailing" secondItem="j4v-40-xN1" secondAttribute="trailing" constant="20" id="Glu-Aw-eEd"/>
+                            <constraint firstItem="j4v-40-xN1" firstAttribute="top" secondItem="elD-RE-L6g" secondAttribute="top" constant="40" id="MpA-0W-mUx"/>
                             <constraint firstItem="fGu-UE-C59" firstAttribute="leading" secondItem="elD-RE-L6g" secondAttribute="leading" constant="20" id="V6i-1b-ErT"/>
                             <constraint firstItem="elD-RE-L6g" firstAttribute="bottom" secondItem="fGu-UE-C59" secondAttribute="bottom" constant="20" id="XrO-hB-hN9"/>
                             <constraint firstItem="j4v-40-xN1" firstAttribute="leading" secondItem="elD-RE-L6g" secondAttribute="leading" constant="20" id="izR-QK-76R"/>
-                            <constraint firstItem="P1e-YD-dfV" firstAttribute="top" secondItem="elD-RE-L6g" secondAttribute="top" constant="10" id="l3C-HR-LiF"/>
                             <constraint firstItem="elD-RE-L6g" firstAttribute="trailing" secondItem="fGu-UE-C59" secondAttribute="trailing" constant="20" id="mSw-9O-Wdl"/>
-                            <constraint firstItem="elD-RE-L6g" firstAttribute="trailing" secondItem="P1e-YD-dfV" secondAttribute="trailing" constant="20" id="yha-R3-TcB"/>
-                            <constraint firstItem="j4v-40-xN1" firstAttribute="top" secondItem="P1e-YD-dfV" secondAttribute="bottom" constant="5" id="yzY-nd-vKF"/>
-                            <constraint firstItem="t3z-Ur-P1k" firstAttribute="top" secondItem="elD-RE-L6g" secondAttribute="top" constant="10" id="zgg-sx-jlr"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="elD-RE-L6g"/>
                     </view>
@@ -807,7 +777,6 @@
                         <outlet property="chat" destination="Km6-y1-0l4" id="TvP-76-GrU"/>
                         <outlet property="cosmosView" destination="yIi-nh-Wid" id="lmN-BF-Ff2"/>
                         <outlet property="doGroce" destination="6DD-gh-hxm" id="fQU-4z-jso"/>
-                        <outlet property="logOutButton" destination="P1e-YD-dfV" id="m3g-GJ-jKz"/>
                         <outlet property="nameLabel" destination="KbR-IC-S0x" id="JVq-rS-paS"/>
                         <outlet property="ratingLabel" destination="NcU-Kp-m4B" id="CUb-HJ-aUq"/>
                         <outlet property="walkADog" destination="hAP-gg-mNy" id="BI7-1y-jpU"/>
@@ -820,7 +789,6 @@
     </scenes>
     <resources>
         <image name="checkmark.circle.fill" catalog="system" width="128" height="121"/>
-        <image name="chevron.left.circle" catalog="system" width="128" height="121"/>
         <image name="circle" catalog="system" width="128" height="121"/>
         <image name="info.circle" catalog="system" width="128" height="121"/>
         <image name="map" width="16" height="16"/>

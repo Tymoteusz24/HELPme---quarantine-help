@@ -18,7 +18,7 @@ struct MapControllerViewModel {
     
     private var _isUserAVolunteer = false
     
-    var regionInMeters: Double = 9000000
+    var regionInMeters: Double = 90000
     
     func returnVolunteerAnnotations() -> [VolunteerAnnotation] {
         let arrayToReturn: [VolunteerAnnotation] = volunteerList.map({
@@ -28,14 +28,20 @@ struct MapControllerViewModel {
         return arrayToReturn
     }
     
-
-
     
 }
 
 
 extension MapControllerViewModel {
-
+    
+    var currentUserProfile: Volunteer? {
+        if let id = FacebookLoginManager().currentProfile?.userID {
+            guard let volunteer = volunteerList.filter({$0.id == id}).first else { return nil }
+             return volunteer
+        } else {
+            return nil
+        }
+    }
   
     
     var isUserAVolunteer: Bool {

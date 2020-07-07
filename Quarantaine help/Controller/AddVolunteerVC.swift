@@ -38,6 +38,7 @@ class AddVolunteerVC: UIViewController {
         
         updateUI()
     }
+  
     
     
     @IBAction func backButtonTapped(_ sender: Any) {
@@ -64,6 +65,7 @@ class AddVolunteerVC: UIViewController {
                 }
                 break
             case . success(let profile):
+                print("success \(profile)")
                 self?.viewModel.addNewVolunteer(for: profile)
                 self?.viewModel.viewState = .backToMap
                 self?.updateUI()

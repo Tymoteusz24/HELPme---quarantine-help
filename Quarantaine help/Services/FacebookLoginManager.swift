@@ -18,6 +18,7 @@ struct FacebookLoginManager {
     }
     
     
+    
     func performFacebookLogin(from vc: UIViewController, completion: @escaping (Result<Profile, Error>) -> Void) {
         loginManager.logIn(permissions: ["user_link"], from: vc) { (result, error) in
             guard error == nil else {
@@ -30,17 +31,29 @@ struct FacebookLoginManager {
                 return
             }
             
-            if let profile = Profile.current {
-                completion(.success(profile))
+            Profile.loadCurrentProfile { (profile, error) in
+                guard error == nil else  {
+                    completion(.failure(FacebookError.failLoadProfile))
+                    return
+                }
+                completion(.success(profile!))
+                return
             }
             
         }
         
     }
+    
+    func logOut() {
+        loginManager.logOut()
+    }
+    
+    
 
     
 }
 
 enum FacebookError: Error {
     case canceleled
+    case failLoadProfile
 }

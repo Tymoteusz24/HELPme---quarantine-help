@@ -27,12 +27,14 @@ class MapVC: UIViewController, MKMapViewDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        mapControllerViewModel.isUserAVolunteer = false
+        
         showSpinner(onView: self.view)
         mapView.delegate = self
         addVButton.isHidden = false
         profileBarItem.isEnabled = false
-
+        
+        // remove after testst
+        UserDefaults.standard.set([], forKey: K.UserDefaults.raitings)
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -82,33 +84,6 @@ class MapVC: UIViewController, MKMapViewDelegate {
            mapView.addAnnotations(annotations)
        }
     
-
-    
-    
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == K.Segues.addSegue {
-            if let addVolunteerVC = segue.destination as? AddVolunteerVC {
-               // addVolunteerVC.delegate = self
-                checkLocationAuthorization()
-                if let location = locationManager.location?.coordinate {
-                    print("\(location)")
-                    //addVolunteerVC.coordinates = VolunteerCoordinates(latitude: NSNumber(value: location.latitude), longitude: NSNumber(value: location.longitude))
-                }
-                
-            }
-        } else if segue.identifier == K.Segues.toVolunteerProfile {
-            if let volunteerProfileVC = segue.destination as? VolunteerProfileVC, let safeVol = chosenVolunteer {
-                volunteerProfileVC.volunteer = safeVol
-             //   volunteerProfileVC.delegate = self
-            }
-        } else if segue.identifier == K.Segues.toOwnProfile  {
-            if let profileVC = segue.destination as? ProfileVC, let safeVol = chosenVolunteer {
-                profileVC.volunteer = safeVol
-              //  profileVC.delegate = self
-            }
-            
-        }
-    }
     
     @IBAction func shareBtnTapped(_ sender: Any) {
         shareApp()
@@ -121,30 +96,31 @@ class MapVC: UIViewController, MKMapViewDelegate {
         let addVC = storyborard.instantiateViewController(identifier: K.StoryboardIdentifiers.addVolunteerController) as AddVolunteerVC
         
         if let location = locationManager.location?.coordinate {
-            print("\(location)")
             addVC.viewModel = AddVolunteerViewModel(coordinates: VolunteerCoordinates(lat: location.latitude, long: location.longitude))
             addVC.viewModel.delegate = self
              self.present(addVC, animated: true, completion: nil)
         }
         
     }
+    
     @IBAction func profileBarItemTapperd(_ sender: UIBarButtonItem) {
-//        if let safeVolu = volunteerBrain.getCurrentUserProfile() {
-//            chosenVolunteer = safeVolu
-//            performSegue(withIdentifier: K.Segues.toOwnProfile, sender: nil)
-//        }
-//
         
+        guard let volunteerProfile = mapControllerViewModel.currentUserProfile else {
+            fatalError("no user profile")
+        }
         
-//        let loginManager = LoginManager()
-//        loginManager.logOut()
-        
-        print(mapView.annotations)
-        
-        
+        guard let vc = storyboard?.instantiateViewController(identifier: K.StoryboardIdentifiers.profileVC, creator: { coder in
+             return ProfileVC(coder: coder, viewModel: CurrentVolunteerProfileViewModel(volunteer: volunteerProfile), delegate: self)
+         }) else {
+             fatalError("Failed to load EditUserViewController from storyboard.")
+         }
+         
+         self.navigationController?.pushViewController(vc, animated: true)
     }
     
 }
+
+//MARK: - Custom Delegates
 
 extension MapVC: FirebaseManagerDelegate {
     func addNewVolunteer(volunteer: Volunteer) {
@@ -157,55 +133,33 @@ extension MapVC: FirebaseManagerDelegate {
     
 }
 
-////MARK: - Firebase delegate
-//
-//extension MapVC: FirebaseManagerDelegate, AddVolunteerDelegate, VolunteerProfileVCDelegate, ProvileVCDelegate {
-//    func didEditProfile(for volunteer: Volunteer) {
-//       // firebaseManager.addNewVolunteer(as: volunteer.returnDict())
-//        volunteerBrain.editProfile(with: volunteer)
-//        updateUI(register: true)
-//
-//    }
-//
-//    func didLogOut(for volunteer: Volunteer) {
-//        volunteerBrain.removeVolunteer(for: volunteer)
-//        updateUI(register: false)
-//    }
-//
-//
-//    func didRankUser(volunteer: Volunteer) {
-//      //  firebaseManager.addNewVolunteer(as: volunteer.returnDict())
-//        volunteerBrain.editProfile(with: volunteer)
-//        updateUI(register: volunteerBrain.isUserProfile())
-//
-//    }
-//
-//    func didAddVolunteer(vol: Volunteer) {
-//      //  firebaseManager.addNewVolunteer(as: vol.returnDict())
-//        volunteerBrain.volunteers.append(vol)
-//        updateUI(register: true)
-//        print("added volounteer \(vol)")
-//        self.requestReview()
-//    }
-//
-//    func didFailFetchData() {
-//        self.removeSpinner()
-//    }
-//
-//    func didFetchDataFromFirebase(data: [Volunteer]) {
-//        self.volunteerBrain.volunteers = data
-//        DispatchQueue.main.async {
-//            self.updateUI(register: self.volunteerBrain.isUserProfile() )
-//            self.removeSpinner()
-//        }
-//
-//        self.requestReview()
-//    }
-//
-//
-//
-//}
-//
+extension MapVC: VolunteerProfileVCDelegate , ProfileVCDelegate {
+    func didEditProfile(for volunteer: Volunteer) {
+        if let row = mapControllerViewModel.volunteerList.firstIndex(where: {$0.id == volunteer.id}) {
+                   mapControllerViewModel.volunteerList[row] = volunteer
+        }
+        
+        print("edidter profile")
+    }
+    
+    func didLogOut(for volunteer: Volunteer) {
+        if let row = mapControllerViewModel.volunteerList.firstIndex(where: {$0.id == volunteer.id}) {
+            mapControllerViewModel.isUserAVolunteer = false
+            mapControllerViewModel.volunteerList.remove(at: row)
+        }
+        print("logout")
+    }
+    
+    func didRankUser(volunteer: Volunteer) {
+        if let row = mapControllerViewModel.volunteerList.firstIndex(where: {$0.id == volunteer.id}) {
+            mapControllerViewModel.volunteerList[row] = volunteer
+            updateUI()
+        }
+        
+    }
+    
+    
+}
 
 
 //MARK: -  CLLocation and Mapkit delegate
@@ -294,9 +248,12 @@ extension MapVC: CLLocationManagerDelegate {
         
         if let pin = view.annotation as? VolunteerAnnotation  {
 
-            let storyboard = UIStoryboard(name: "Main", bundle: nil)
-            let vc = storyboard.instantiateViewController(identifier: K.StoryboardIdentifiers.volunteerProfileVC) as VolunteerProfileVC
-            vc.volunteer = pin.volunteer
+            guard let vc = storyboard?.instantiateViewController(identifier: K.StoryboardIdentifiers.volunteerProfileVC, creator: { coder in
+                return VolunteerProfileVC(coder: coder, viewModel: VolunteerProfileViewModel(volunteer: pin.volunteer), delegate: self)
+            }) else {
+                fatalError("Failed to load EditUserViewController from storyboard.")
+            }
+            
             self.navigationController?.pushViewController(vc, animated: true)
         }
     }

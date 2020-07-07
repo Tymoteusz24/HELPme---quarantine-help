@@ -13,9 +13,7 @@ import FBSDKLoginKit
 
 
 struct Volunteer: Codable {
-    var firebaseID: String {
-        return ""
-    }
+    let id: String
     let name: String
     let facebookProfile: String
     let fbPictureURL: String
@@ -24,8 +22,14 @@ struct Volunteer: Codable {
     var rate: [Double]
     
     
+    
+    var averageRaiting: Double {
+        guard self.rate.count > 1 else { return 0.0 }
+        return self.rate.reduce(0, +)/Double(self.rate.count - 1)
+    }
+    
+    
     init(from profile: Profile, coordinates: VolunteerCoordinates, kindOfHelp: [KindOfHelp]) {
-        
         
         self.name = profile.firstName ?? ""
         self.facebookProfile = ("\(profile.linkURL!)")
@@ -33,71 +37,8 @@ struct Volunteer: Codable {
         self.coordinates = coordinates
         self.kindOfHelp = kindOfHelp.map{$0.rawValue}
         self.rate = [0.0]
-        
+        self.id = profile.userID
     }
-    
-//    
-//    var roundedLatitude: Double {
-//        Double(round(100 * Double(coordinates.lat))/100)
-//    }
-//    
-//    var roundedLongitude: Double {
-//        Double(round(100 * Double(coordinates.long))/100)
-//    }
-    
-//    var kindOfKelpArray: [String] {
-//        var tempArray = [String]()
-//        for kind in kindOfHelp {
-//            tempArray.append(kind.rawValue)
-//        }
-//        return tempArray
-//    }
-//    
-//    init(id: String, n: String, fbProfileID: URL, coord: VolunteerCoordinates, help: [KindOfHelp], pictureUrl: URL) {
-//        self.busy = false
-//        self.rate = [0.0]
-//        self.firebaseID = id
-//        self.name = n
-//        self.facebookProfileUrl = fbProfileID
-//        self.coordinates = coord
-//        self.kindOfHelp = help
-//        self.fbPictureURL = pictureUrl
-//    }
-//    
-//    init(id: String, dict: [String: Any]) {
-//        self.firebaseID = id
-//        self.name = dict[K.UserFirebaseKeys.name] as! String
-//        self.facebookProfileUrl = URL(string: (dict[K.UserFirebaseKeys.facebookProfile] as! String)) ?? URL(fileURLWithPath: "")
-//        self.fbPictureURL = URL(string: (dict[K.UserFirebaseKeys.fbPictureURL]) as! String) ?? URL(fileURLWithPath: "")
-//        
-//        self.busy = dict[K.UserFirebaseKeys.busy] as! Bool
-//        
-//        
-//        let coordValue = dict[K.UserFirebaseKeys.coordinates] as! [String:Any]
-//        self.coordinates = VolunteerCoordinates(dict: coordValue)
-//        
-//        let rateDict = dict[K.UserFirebaseKeys.rate] as! [NSNumber]
-//        var tempRate: [Float] = []
-//        for raiting in rateDict {
-//            tempRate.append(Float(raiting))
-//        }
-//        self.rate = tempRate
-//        
-//        let helpDict = dict[K.UserFirebaseKeys.kindOfHelp] as! [String]
-//        
-//        var tempHelp: [KindOfHelp] = []
-//        for help in helpDict {
-//            tempHelp.append(KindOfHelp(rawValue: help)!)
-//        }
-//        self.kindOfHelp = tempHelp
-//    }
-//    
-//    func returnDict() -> [String: Any] {
-//        return [K.UserFirebaseKeys.name : name, K.UserFirebaseKeys.facebookProfile : facebookProfileUrl.absoluteString, K.UserFirebaseKeys.coordinates : coordinates.dict, K.UserFirebaseKeys.rate : rate, K.UserFirebaseKeys.kindOfHelp : kindOfKelpArray , K.UserFirebaseKeys.busy : busy, K.UserFirebaseKeys.fbPictureURL : fbPictureURL.absoluteString]
-//    }
-    
-    
-    
 }
 
 struct VolunteerCoordinates: Codable {

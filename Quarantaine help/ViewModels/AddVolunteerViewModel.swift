@@ -14,6 +14,14 @@ protocol FirebaseManagerDelegate {
 }
 
 
+
+enum AddVolunteerViewState {
+    case addTypeOfHelp
+    case facebookLogIn
+    case backToMap
+}
+
+
 struct AddVolunteerViewModel {
     var kindOfHelps: [KindOfHelp] = []
     var coordinates: VolunteerCoordinates
@@ -62,16 +70,10 @@ extension AddVolunteerViewModel {
         let volunteer = Volunteer(from: profile, coordinates: coordinates, kindOfHelp: kindOfHelps)
         
         let resource =  Resource<Volunteer>(for: K.UserFirebaseKeys.users)
-        firebaseManager.addNewVolunteer(resource: resource, volunteer: volunteer)
+        firebaseManager.addNewVolunteer(resource: resource, volunteer: volunteer, id: volunteer.id)
         
         delegate?.addNewVolunteer(volunteer: volunteer)
     }
     
 }
 
-
-enum AddVolunteerViewState {
-    case addTypeOfHelp
-    case facebookLogIn
-    case backToMap
-}
